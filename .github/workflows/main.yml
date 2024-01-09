@@ -26,7 +26,7 @@ jobs:
       # Setup Nodejs
       - name: Setup Nodejs
         uses: actions/setup-node@v4.0.1
-        with: 
+        with:
           node-version: "18"
 
       # Install dependencies
@@ -45,10 +45,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      # Build app for production
-      - name: Build app bundle
-        run: npm run build:prod
-
-      # Deploy github pages
-      - name: Deploy to pages
-        uses
